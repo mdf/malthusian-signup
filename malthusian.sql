@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 07, 2012 at 04:05 PM
+-- Generation Time: Oct 07, 2012 at 11:53 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.8
 
@@ -19,6 +19,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `malthusian`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checkins`
+--
+
+CREATE TABLE IF NOT EXISTS `checkins` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `player_id` bigint(20) NOT NULL,
+  `tag_id` bigint(20) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `location` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
@@ -40,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `registered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -84,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `player_tag` (
 CREATE TABLE IF NOT EXISTS `tag` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=10000 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10010 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
