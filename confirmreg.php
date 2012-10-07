@@ -1,11 +1,11 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
 if(isset($_GET['code']))
 {
-   if($fgmembersite->ConfirmUser())
+   if($registrationSite->confirmUser())
    {
-        $fgmembersite->RedirectToURL("thank-you-regd.php");
+        $registrationSite->redirectToURL("thank-you-regd.php");
    }
 }
 
@@ -18,9 +18,9 @@ if(isset($_GET['code']))
 Please enter the confirmation code in the box below
 </p>
 
-<form id='confirm' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='get' accept-charset='UTF-8'>
+<form id='confirm' action='<?php echo $registrationSite->getSelfScript(); ?>' method='get' accept-charset='UTF-8'>
 
-<?php echo $fgmembersite->GetErrorMessage(); ?>
+<?php echo $registrationSite->getErrorMessage(); ?>
 
 Confirmation Code
 <input type='text' name='code' id='code' maxlength="50" /><br/>

@@ -1,11 +1,11 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
 if(isset($_POST['submitted']))
 {
-   if($fgmembersite->Login())
+   if($registrationSite->login())
    {
-        $fgmembersite->RedirectToURL("login-home.php");
+        $registrationSite->redirectToURL("login-home.php");
    }
 }
 
@@ -14,14 +14,14 @@ if(isset($_POST['submitted']))
 <html>
 <body>
 
-<form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+<form id='login' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 
 <input type='hidden' name='submitted' id='submitted' value='1'/>
 
-<?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
+<?php echo $registrationSite->getErrorMessage(); ?></span></div>
 
-UserName
-<input type='text' name='username' id='username' value='<?php echo $fgmembersite->SafeDisplay('username') ?>' maxlength="50" />
+Codename
+<input type='text' name='codename' id='codename' value='<?php echo $registrationSite->safeDisplay('codename') ?>' maxlength="50" />
 
 Password
 <input type='password' name='password' id='password' maxlength="50" />

@@ -1,0 +1,8 @@
+Hello MP_CODENAME,
+
+Thanks for your registration with malthusian paradox.
+
+Please click the link below to confirm your registration, or paste it into your browser.
+
+MP_CONFIRMURL
+

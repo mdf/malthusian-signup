@@ -1,9 +1,9 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
-if(!$fgmembersite->CheckLogin())
+if(!$registrationSite->checkLogin())
 {
-    $fgmembersite->RedirectToURL("login.php");
+    $registrationSite->redirectToURL("login.php");
     exit;
 }
 
@@ -14,7 +14,7 @@ if(!$fgmembersite->CheckLogin())
 <h2>Home Page</h2>
 
 <p>
-Welcome back <?= $fgmembersite->UserFullName(); ?>!
+Welcome back <?php echo $registrationSite->sessionCodename(); ?>
 <p>
 
 <p>
@@ -22,7 +22,7 @@ Welcome back <?= $fgmembersite->UserFullName(); ?>!
 </p>
 
 <p>
-<a href='access-controlled.php'>A sample 'members-only' page</a>
+<a href='profile.php'>Your profile</a>
 </p>
 
 <p>

@@ -2,7 +2,47 @@
 
 session_start();
 
-if(isset($_POST["gender"]))
+foreach($_POST as $key => $val)
+{
+	if(!is_array($val))
+	{
+		if(strlen($val)>0)
+		{
+			$_SESSION['player_info']['demographics'][$key] = $val;
+		}
+		else 
+		{
+			$_SESSION['player_info']['demographics'][$key] = null;
+		}
+	}
+	else
+	{
+		$vstr = "";
+		
+		foreach ($val as $v)
+		{
+			if(strlen($v)>0)
+			{
+				$vstr .= $v . ",";
+			}
+		}
+		
+		$_SESSION['player_info']['demographics'][$key] = $vstr;
+	}
+}
+
+
+/*
+	foreach ($_SESSION as $key=>$val)
+		echo $key." \"".$val."\"";
+		
+		print_r($_SESSION);
+
+		print_r($_POST);
+		*/
+		
+		/*
+if(isset($_POST["q2"]))
 {
 	$_SESSION['gender'] = $_POST["gender"];
 }
@@ -60,6 +100,8 @@ else
 {
 	$_SESSION['previous'] = "none";
 }
+
+*/
 
 ?>
 
@@ -142,19 +184,19 @@ We need your consent to allow us to collect and analyse data regarding your part
 <input type="hidden" name="csubmitted" id="csubmitted" value="1"/>
 
 <p>
-<input type="checkbox" name="consent_info" value="consent_info"> I have read and understand the attached information sheet, which includes information about the research project, and the data that may be recorded and published. I understand that I can withdraw consent for my participation at any time, and my personal data will be erased from our records and systems.
+<input type="checkbox" name="1" value="true"> I have read and understand the attached information sheet, which includes information about the research project, and the data that may be recorded and published. I understand that I can withdraw consent for my participation at any time, and my personal data will be erased from our records and systems.
 </p>
 
 <p>
-<input type="checkbox" name="consent_logs" value="consent_logs"> I give permission for digital records generated during the course of my interaction with the Malthusian Paradox, including information I submit to the game’s websites, to be used as part of the study in an anonymised form.
+<input type="checkbox" name="2" value="true"> I give permission for digital records generated during the course of my interaction with the Malthusian Paradox, including information I submit to the game’s websites, to be used as part of the study in an anonymised form.
 </p>
 
 <p>
-<input type="checkbox" name="consent_video" value="consent_video"> I give consent for video and audio recordings of my interactions with the game at participating venues to be collected, and I agree to the use of this data in an anonymised form.
+<input type="checkbox" name="3" value="true"> I give consent for video and audio recordings of my interactions with the game at participating venues to be collected, and I agree to the use of this data in an anonymised form.
 </p>
 
 <p>
-<input type="checkbox" name="consent_interview" value="consent_interview"> I give consent to taking part in a structured interview regarding my experience of the Malthusian Paradox at the conclusion of the game, and I agree to the use of this data in an anonymised form.
+<input type="checkbox" name="4" value="true"> I give consent to taking part in a structured interview regarding my experience of the Malthusian Paradox at the conclusion of the game, and I agree to the use of this data in an anonymised form.
 </p>
 
 <p>

@@ -1,12 +1,12 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
 $emailsent = false;
 if(isset($_POST['submitted']))
 {
-   if($fgmembersite->EmailResetPasswordLink())
+   if($registrationSite->emailResetPasswordLink())
    {
-        $fgmembersite->RedirectToURL("reset-pwd-link-sent.php");
+        $registrationSite->redirectToURL("reset-pwd-link-sent.php");
         exit;
    }
 }
@@ -16,12 +16,13 @@ if(isset($_POST['submitted']))
 <html>
 <body>
 
-<form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+<form id='resetreq' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 
 <input type='hidden' name='submitted' id='submitted' value='1'/>
-<?php echo $fgmembersite->GetErrorMessage(); ?>
+<?php echo $registrationSite->getErrorMessage(); ?>
 
-<input type='text' name='email' id='email' value='<?php echo $fgmembersite->SafeDisplay('email') ?>' maxlength="50" />
+Enter the email address you registered with
+<input type='text' name='email' id='email' value='<?php echo $registrationSite->safeDisplay('email') ?>' maxlength="50" />
 
 <input type='submit' name='submit' value='submit' />
 

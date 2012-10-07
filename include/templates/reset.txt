@@ -1,0 +1,5 @@
+Hello MP_CODENAME,
+
+Click on this link to reset your password
+
+MP_PASSWORDURL

@@ -1,17 +1,17 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
-if(!$fgmembersite->CheckLogin())
+if(!$registrationSite->checkLogin())
 {
-    $fgmembersite->RedirectToURL("login.php");
+    $registrationSite->redirectToURL("login.php");
     exit;
 }
 
 if(isset($_POST['submitted']))
 {
-   if($fgmembersite->ChangePassword())
+   if($registrationSite->changePassword())
    {
-        $fgmembersite->RedirectToURL("changed-pwd.php");
+        $registrationSite->redirectToURL("changed-pwd.php");
    }
 }
 
@@ -20,9 +20,9 @@ if(isset($_POST['submitted']))
 <html>
 <body>
 
-<form id='changepwd' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+<form id='changepwd' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 
-<?php echo $fgmembersite->GetErrorMessage(); ?>
+<?php echo $registrationSite->getErrorMessage(); ?>
 
 <input type="hidden" name="submitted" id="submitted" value="1"/>
 

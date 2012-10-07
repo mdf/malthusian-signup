@@ -1,8 +1,9 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
 $success = false;
-if($fgmembersite->ResetPassword())
+
+if($registrationSite->resetPassword())
 {
     $success=true;
 }
@@ -16,12 +17,12 @@ if($fgmembersite->ResetPassword())
 if($success){
 ?>
 <h2>Password is Reset Successfully</h2>
-Your new password is sent to your email address.
+Your new password has been sent to your email address.
 <?php
 }else{
 ?>
 <h2>Error</h2>
-<?php echo $fgmembersite->GetErrorMessage(); ?>
+<?php echo $registrationSite->getErrorMessage(); ?>
 <?php
 }
 ?>

@@ -1,7 +1,7 @@
 <?PHP
-require_once("./include/membersite_config.php");
+require_once("./include/registration.php");
 
-$fgmembersite->LogOut();
+$registrationSite->logout();
 ?>
 
 <html>

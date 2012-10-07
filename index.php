@@ -10,7 +10,7 @@
 <a href="login.php">Login</a>
 </p>
 <p>
-<a href="access-controlled.php">A member's only page</a>
+<a href="profile.php">A member's only page</a>
 </p>
 </p>
 </body>
