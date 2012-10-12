@@ -120,7 +120,7 @@ function enableButton()
 </script>
 
   <label for="Terms"></label>
-  <textarea name="Terms" cols="60" rows="15" readonly id="Terms">For your piece of mind we will do everything possible to protect your information.
+  <textarea name="Terms" cols="60" rows="10" readonly id="Terms">For your piece of mind we will do everything possible to protect your information.
 
 GENERAL PRIVACY
 

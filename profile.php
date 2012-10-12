@@ -120,7 +120,7 @@ if(!$registrationSite->checkLogin())
   </p>
 </p>
 <p align="center"><strong>This is your unique QR identity tag</strong><br>
-Save it to your phones camera roll or print out. You should bring it with you to all live events.<br>
+Save it to your phones camera roll or print it out. You should bring it with you to all live events.<br>
 </p>
 </p>
 <p>

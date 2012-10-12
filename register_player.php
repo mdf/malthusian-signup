@@ -125,12 +125,12 @@ if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
 <!-- Begin | MRL registration code  -->
 
 
-<p><span class="clr-2">*</span> indicates required</p>
+<p><span class="text-error">* </span>Indicates required</p>
 <p>&nbsp;</p>
 
 <form method="post" action="register_player.php">
 
-<span class="clr-3">
+<span class="alert-error">
 <input type="hidden" name="psubmitted" id="psubmitted" value="1"/>
 
 <?php echo $registrationSite->getErrorMessage(); ?></span>
@@ -146,13 +146,13 @@ Last name <input type='text' name="lastname" id="lastname" value="<?php echo $re
 <p>&nbsp;</p>
 
 <p>
-Code name<span class="clr-2">*</span>
+Code name<span class="text-error">*</span>
 <input type='text' name="codename" id="codename" value="<?php echo $registrationSite->safeDisplay("codename") ?>" maxlength="50" />
 </p>
 <p>&nbsp;</p>
 
 <p>
-Email address<span class="clr-2">*</span>
+Email address<span class="text-error">*</span>
 <input type='text' name="email" id="email" value="<?php echo $registrationSite->safeDisplay("email") ?>" maxlength="32" />
 </p>
 <p>&nbsp;</p>
@@ -173,13 +173,13 @@ Mobile number <input type='text' name="mobile" id="mobile" value="<?php echo $re
 <p>&nbsp;</p>
 
 <p>
-Password<span class="clr-2">*</span>
+Password<span class="text-error">*</span>
 <input type='password' name="password" id="password" value="<?php echo $registrationSite->safeDisplay("password") ?>" maxlength="32" />
 </p>
 <p>&nbsp;</p>
 
 <p>
-Retype password<span class="clr-2">*</span>
+Retype password<span class="text-error">*</span>
 <input type='password' name="password2" id="password2" value="<?php echo $registrationSite->safeDisplay("password2") ?>" maxlength="32" />
 </p>
 

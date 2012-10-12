@@ -229,8 +229,13 @@ else
 <html>
 
 <p>
-  <label for="study"></label>
-  <textarea name="study" cols="60" rows="15" readonly id="study">We are a team of researchers from the Mixed Reality Lab and the Department of Culture, Film and Media at the University of Nottingham. We are working on the Malthusian Paradox project, which is funded by the Arts Council through a Grants for the Arts award. An area of research we are particularly interested in is the interaction between people and computers. In the future, the number of computer devices used by humans will increase dramatically, adding complexity to the way we interact with technology, but also new opportunities to create games and other interactive experiences. 
+<form method="post" action="register_player.php">
+  <label for="study">
+    <input type="submit" value="next">
+    <br>
+    <br>
+  </label>
+  <textarea name="study" cols="60" rows="10" readonly id="study">We are a team of researchers from the Mixed Reality Lab and the Department of Culture, Film and Media at the University of Nottingham. We are working on the Malthusian Paradox project, which is funded by the Arts Council through a Grants for the Arts award. An area of research we are particularly interested in is the interaction between people and computers. In the future, the number of computer devices used by humans will increase dramatically, adding complexity to the way we interact with technology, but also new opportunities to create games and other interactive experiences. 
 
 The aim of our research is to explore the different ways that the creative sector can make use of these new technologies, and understand how audiences and players engage with and experience games that are built using them. To this end we have worked in collaboration with Urban Angel to create the game that you are about to play. Specific aspects of the game have been designed with our research in mind. 
 
@@ -248,8 +253,6 @@ One of our researchers will be visibly present at the participating venues that 
 
 At the conclusion of the game we would potentially also like to ask you a series of short questions about your gaming experience, and record your answers using video and audio recordings. 
 
-
-
 All of this data will be held in a secure and safe manner in accordance with the Data Protection Act 1998. Access to this data will be restricted to researchers involved in the project, and will be processed confidentially and completely anonymously. It is within your rights to refuse the collection of any of the specific types of data identified above. The results from the study will be used for publication in academic conferences and journals. The expected total length of the study is equal to the duration of the game. You are free to withdraw at any point during, or after, the study and any data collected will be erased from our records. 
 
 To withdraw, simply inform the researcher present at the venue or use the following details to contact us with any queries you might have:
@@ -264,7 +267,6 @@ NG8 1BB
 
 martin.flintham@nottingham.ac.uk
 
-
 This project has been subject to ethical review, according to the procedures specified by the University of Nottingham Research Ethics Committee, and has been allowed to proceed. 
 
 The Malthusian Paradox Study Consent Form
@@ -278,23 +280,22 @@ We need your consent to allow us to collect and analyse data regarding your part
   <b>Please note that you may withhold consent from any or all of the study, and this will not affect or detrimentally change your experience of the Malthusian Paradox.</b>
 </p>
 
-<form method="post" action="register_player.php">
+
 
 <p>
   <input type="hidden" name="csubmitted" id="csubmitted" value="1"/>
 </p>
-<p>&nbsp; </p>
 <p>
-  <input name="1" type="checkbox" value="true"> I have read and understand the attached information sheet, which includes information about the research project, and the data that may be recorded and published. I understand that I can withdraw consent for my participation at any time, and my personal data will be erased from our records and systems.</p>
+  <input name="1" type="checkbox" value="true" checked> I have read and understand the attached information sheet, which includes information about the research project, and the data that may be recorded and published. I understand that I can withdraw consent for my participation at any time, and my personal data will be erased from our records and systems.</p>
 <p>
-  <input type="checkbox" name="2" value="true">
+  <input name="2" type="checkbox" value="true" checked>
  I give permission for digital records generated during the course of my interaction with The Malthusian Paradox, including information I submit to the  websites, to be used as part of the study in an anonymised form.
 </p>
 <p>
-  <input type="checkbox" name="3" value="true"> I give consent for video and audio recordings of my interactions with the game at participating venues to be collected, and I agree to the use of this data in an anonymised form.
+  <input name="3" type="checkbox" value="true" checked> I give consent for video and audio recordings of my interactions with the game at participating venues to be collected, and I agree to the use of this data in an anonymised form.
 </p>
 <p>
-  <input type="checkbox" name="4" value="true"> 
+  <input name="4" type="checkbox" value="true" checked> 
 I give consent to taking part in a structured interview regarding my experience of The Malthusian Paradox at the conclusion of the game, and I agree to the use of this data in an anonymised form.</p>
 <p>&nbsp;</p>
 

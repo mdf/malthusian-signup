@@ -112,8 +112,8 @@ if(!$registrationSite->checkLogin())
 <p>
 <p align="center"><img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>">
   </p>
-<p align="center"><strong>This is your unique QR identity tag</strong><br>
-  Save it to your phones camera roll or print out. You should bring it with you to all live events. You can access it at any time in your <a href='profile.php'>profile</a>.</p>
+<p align="center"><strong>This is your unique QR identity tag</strong></p>
+<p align="center">Save it to your phones camera roll or print it out. You should bring it with you to all live events. You can access it at any time in your <a href='profile.php'>profile</a>.</p>
 <p>
 <p>
 <p><a href='profile.php'>View your profile</a>
