@@ -511,7 +511,7 @@ class RegistrationSite
         
     	$mailer = new PHPMailer();
         
-        $mailer->CharSet = 'utf-8';
+        $mailer->CharSet = 'UTF-8';
         
         $mailer->AddAddress($email, $codename);
         
@@ -547,7 +547,7 @@ class RegistrationSite
         
     	$mailer = new PHPMailer();
         
-        $mailer->CharSet = 'utf-8';
+        $mailer->CharSet = 'UTF-8';
         
         $mailer->AddAddress($email, $codename);
         
@@ -610,7 +610,7 @@ class RegistrationSite
     {
     	$mailer = new PHPMailer();
         
-        $mailer->CharSet = 'utf-8';
+        $mailer->CharSet = 'UTF-8';
         
         $mailer->AddAddress($email, $codename);
         

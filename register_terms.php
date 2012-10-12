@@ -102,6 +102,8 @@ require_once("./include/dob_selector.php");
 
 ?>
 
+<!-- End | MRL registration code  -->
+
 <script type="text/javascript">
 
 function enableButton()

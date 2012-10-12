@@ -1,3 +1,16 @@
+<?PHP
+require_once("./include/registration.php");
+
+if(!$registrationSite->checkLogin())
+{
+    $registrationSite->redirectToURL("login.php");
+    exit;
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -91,21 +104,10 @@
 
 <!-- PostLoop | Section Template -->
 <section id="postloop" class="copy no_clone section-postloop"><div class="copy-pad"><article class="post-39 page type-page status-publish hentry fpost post-number-1" id="post-39"><div class="hentry-pad"><section class="post-meta fix post-nothumb  media"><section class="bd post-header fix" ><section class="bd post-title-section fix"><hgroup class="post-title fix">
-  <h1 class="entry-title pagetitle"><?php echo $registrationSite->sessionCodename(); ?> welcome to AMBER</h1>
+  <h1 class="entry-title pagetitle">Welcome to AMBER</h1>
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
 <!-- Begin | MRL registration code  -->
-
-<?PHP
-require_once("./include/registration.php");
-
-if(!$registrationSite->checkLogin())
-{
-    $registrationSite->redirectToURL("login.php");
-    exit;
-}
-
-?>
 
 <p>
 Welcome back <?php echo $registrationSite->sessionCodename(); ?>

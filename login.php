@@ -1,3 +1,18 @@
+<?PHP
+require_once("./include/registration.php");
+
+if(isset($_POST['submitted']))
+{
+   if($registrationSite->login())
+   {
+        $registrationSite->redirectToURL("login-home.php");
+   }
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -95,19 +110,6 @@
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
 <!-- Begin | MRL registration code  -->
-
-<?PHP
-require_once("./include/registration.php");
-
-if(isset($_POST['submitted']))
-{
-   if($registrationSite->login())
-   {
-        $registrationSite->redirectToURL("login-home.php");
-   }
-}
-
-?>
 
 
 <form id='login' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>

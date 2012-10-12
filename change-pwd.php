@@ -1,10 +1,31 @@
+<?PHP
+require_once("./include/registration.php");
+
+if(!$registrationSite->checkLogin())
+{
+    $registrationSite->redirectToURL("login.php");
+    exit;
+}
+
+if(isset($_POST['submitted']))
+{
+   if($registrationSite->changePassword())
+   {
+        $registrationSite->redirectToURL("changed-pwd.php");
+   }
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <!-- Title -->
-<title>We Are AMBER | Login</title>
+<title>We Are AMBER | Change password</title>
 
 <!-- Start >> Meta Tags and Inline Scripts -->
 <meta name='robots' content='noindex,nofollow' />
@@ -96,29 +117,6 @@
 
 <!-- Begin | MRL registration code  -->
 
-<?PHP
-require_once("./include/registration.php");
-
-if(!$registrationSite->checkLogin())
-{
-    $registrationSite->redirectToURL("login.php");
-    exit;
-}
-
-if(isset($_POST['submitted']))
-{
-   if($registrationSite->changePassword())
-   {
-        $registrationSite->redirectToURL("changed-pwd.php");
-   }
-}
-
-?>
-
-<html>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<body>
-
 <form id='changepwd' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 
 <?php echo $registrationSite->getErrorMessage(); ?>
@@ -141,9 +139,7 @@ Retype password <input type='password' name="password2" id="password2" maxlength
 
 </form>
 
-
 <!-- End | MRL registration code  -->
-
 
 </div></div></div></article><div class="clear"></div></div></section>					</div>
 				</div>

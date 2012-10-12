@@ -1,3 +1,31 @@
+<?php
+
+session_start();
+
+require_once("./include/registration.php");
+
+if(isset($_POST["csubmitted"]) && $_POST["csubmitted"]==1)
+{	
+	$_SESSION['player_info']['consent'] = array();
+	
+	foreach($_POST as $key => $val)
+	{
+		$_SESSION['player_info']['consent'][$key] = $val;
+	}
+}
+	
+if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
+{
+   if($registrationSite->registerUser())
+   {
+        $registrationSite->redirectToURL("thank-you.php");
+   }
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -96,31 +124,6 @@
 
 <!-- Begin | MRL registration code  -->
 
-<?php
-
-session_start();
-
-require_once("./include/registration.php");
-
-if(isset($_POST["csubmitted"]) && $_POST["csubmitted"]==1)
-{	
-	$_SESSION['player_info']['consent'] = array();
-	
-	foreach($_POST as $key => $val)
-	{
-		$_SESSION['player_info']['consent'][$key] = $val;
-	}
-}
-	
-if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
-{
-   if($registrationSite->registerUser())
-   {
-        $registrationSite->redirectToURL("thank-you.php");
-   }
-}
-
-?>
 
 <p><span class="clr-2">*</span> indicates required</p>
 <p>&nbsp;</p>

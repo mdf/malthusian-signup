@@ -1,3 +1,11 @@
+<?PHP
+require_once("./include/registration.php");
+
+$registrationSite->logout();
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -95,12 +103,6 @@
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
 <!-- Begin | MRL registration code  -->
-
-<?PHP
-require_once("./include/registration.php");
-
-$registrationSite->logout();
-?>
 
 <p>
 You have logged out

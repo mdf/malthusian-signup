@@ -716,9 +716,9 @@ class PHPMailer {
    */
   function WrapText($message, $length, $qp_mode = false) {
     $soft_break = ($qp_mode) ? sprintf(" =%s", $this->LE) : $this->LE;
-    // If utf-8 encoding is used, we will need to make sure we don't
+    // If UTF-8 encoding is used, we will need to make sure we don't
     // split multibyte characters when we wrap
-    $is_utf8 = (strtolower($this->CharSet) == "utf-8");
+    $is_utf8 = (strtolower($this->CharSet) == "UTF-8");
 
     $message = $this->FixEOL($message);
     if (substr($message, -1) == $this->LE) {
@@ -788,11 +788,11 @@ class PHPMailer {
   }
 
   /**
-   * Finds last character boundary prior to maxLength in a utf-8
+   * Finds last character boundary prior to maxLength in a UTF-8
    * quoted (printable) encoded string.
    * Original written by Colin Brown.
    * @access private
-   * @param string $encodedText utf-8 QP text
+   * @param string $encodedText UTF-8 QP text
    * @param int    $maxLength   find last character boundary prior to this length
    * @return int
    */

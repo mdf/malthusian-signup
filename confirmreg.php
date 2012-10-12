@@ -1,3 +1,18 @@
+<?PHP
+require_once("./include/registration.php");
+
+if(isset($_GET['code']))
+{
+   if($registrationSite->confirmUser())
+   {
+        $registrationSite->redirectToURL("thank-you-regd.php");
+   }
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -96,22 +111,6 @@
 
 <!-- Begin | MRL registration code  -->
 
-<?PHP
-require_once("./include/registration.php");
-
-if(isset($_GET['code']))
-{
-   if($registrationSite->confirmUser())
-   {
-        $registrationSite->redirectToURL("thank-you-regd.php");
-   }
-}
-
-?>
-
-<html>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<body>
 
 <p>
 Please enter the confirmation code in the box below

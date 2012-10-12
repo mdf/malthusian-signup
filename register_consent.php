@@ -1,3 +1,25 @@
+<?php
+
+session_start();
+
+if(isset($_POST["terms"]))
+{
+	$_SESSION['terms'] = true;
+}
+else
+{
+	$_SESSION['terms'] = false;
+}
+
+$_SESSION['player_info'] = array();
+$_SESSION['player_info']['demographics'] = array();
+
+$_SESSION['player_info']['demographics']['1'] = date($_POST['day'] . "/" . $_POST['month'] . "/" . $_POST['year']);
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -96,25 +118,6 @@
 
 <!-- Begin | MRL registration code  -->
 
-<?php
-
-session_start();
-
-if(isset($_POST["terms"]))
-{
-	$_SESSION['terms'] = true;
-}
-else
-{
-	$_SESSION['terms'] = false;
-}
-
-$_SESSION['player_info'] = array();
-$_SESSION['player_info']['demographics'] = array();
-
-$_SESSION['player_info']['demographics']['1'] = date($_POST['day'] . "/" . $_POST['month'] . "/" . $_POST['year']);
-
-?>
 
 <?php
 
