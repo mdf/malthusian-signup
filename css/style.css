@@ -5,10 +5,13 @@ body{
 	color: #CCCCCC;
 	position: relative;
 	min-width: 960px;
-	background: url(../images/bg.jpg) center 0 repeat-x #252525;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 20px;
+	background-color: #252525;
+	background-image: none;
+	background-repeat: repeat-x;
+	background-position: center 0;
 }
 html,body{height:100%;}
 p{}
