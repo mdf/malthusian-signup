@@ -10,9 +10,9 @@ class DB
     function DB()
     {
         $this->db_host  = 'localhost';
-        $this->username = 'weareamb_tmpdata';
-        $this->pwd = 'wh_R!^Z0QGAO';
-        $this->database = 'weareamb_tmp';    	
+        $this->username = 'weareamb_?????';
+        $this->pwd = '?????';
+        $this->database = 'weareamb_?????';    	
     }
     
     function connect(&$connection)
