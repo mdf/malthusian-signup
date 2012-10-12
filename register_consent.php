@@ -187,7 +187,7 @@ We need your consent to allow us to collect and analyse data regarding your part
 <p>&nbsp;</p>
 
 <p>
-<input type="submit" class="date" value="next">
+<input type="submit" value="next">
 </p>
 
 </form>

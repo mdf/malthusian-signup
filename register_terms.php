@@ -60,7 +60,7 @@ I agree to the above terms and conditions:
 <input type="checkbox" id="terms" name="terms" value="true" onClick="javascript:enableButton();">
 </p>
 
-<input type="submit" disabled="disabled" class="date" id="submit" value="next">
+<input type="submit" disabled="disabled" id="submit" value="next">
 </form>
 
 </body>

@@ -25,7 +25,7 @@ if(isset($_POST['submitted']))
 Enter the email address you registered with
 <input type='text' name='email' id='email' value='<?php echo $registrationSite->safeDisplay('email') ?>' maxlength="50" />
 
-<input name='submit' type='submit' class="date" value='submit' />
+<input name='submit' type='submit' value='submit' />
 
 </form>
 
