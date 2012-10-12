@@ -21,6 +21,7 @@ function enableButton()
 
 <html>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<title>AMBER Registration</title>
 <body>
 
 <h1>Terms and Conditions</h1>
@@ -48,12 +49,12 @@ Your continued involvement with us is conditional upon the demonstration of a pu
 
 <form method="post" action="register_demographic.php">
   
-  <p>
-Please enter your date of birth:
-<?php 
+  <h6>&nbsp;  </h6>
+  <h6>Please enter your date of birth:
+  <?php 
 echo dob_selector();
 ?>
-</p>
+  </h6>
 
 <p>
 I agree to the above terms and conditions: 

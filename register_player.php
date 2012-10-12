@@ -26,20 +26,24 @@ if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
 
 <html>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<title>AMBER Registration</title>
 <body>
 
 <h1>
-Player Registration
+AMBER Registration
 </h1>
+<p><span class="clr-2">*</span> indicates required</p>
+<p>&nbsp;</p>
 
 <form method="post" action="register_player.php">
 
+<span class="clr-3">
 <input type="hidden" name="psubmitted" id="psubmitted" value="1"/>
 
-<?php echo $registrationSite->getErrorMessage(); ?>
+<?php echo $registrationSite->getErrorMessage(); ?></span>
 
 <p>
-First name <input type='text' name="firstname" id="firstname" value="<?php echo $registrationSite->safeDisplay("firstname") ?>" maxlength="50" />
+  First name <input type='text' name="firstname" id="firstname" value="<?php echo $registrationSite->safeDisplay("firstname") ?>" maxlength="50" />
 </p>
 <p>&nbsp;</p>
 
@@ -49,12 +53,14 @@ Last name <input type='text' name="lastname" id="lastname" value="<?php echo $re
 <p>&nbsp;</p>
 
 <p>
-Code name <input type='text' name="codename" id="codename" value="<?php echo $registrationSite->safeDisplay("codename") ?>" maxlength="50" />
+Code name<span class="clr-2">*</span>
+<input type='text' name="codename" id="codename" value="<?php echo $registrationSite->safeDisplay("codename") ?>" maxlength="50" />
 </p>
 <p>&nbsp;</p>
 
 <p>
-Email address <input type='text' name="email" id="email" value="<?php echo $registrationSite->safeDisplay("email") ?>" maxlength="32" />
+Email address<span class="clr-2">*</span>
+<input type='text' name="email" id="email" value="<?php echo $registrationSite->safeDisplay("email") ?>" maxlength="32" />
 </p>
 <p>&nbsp;</p>
 
@@ -74,12 +80,14 @@ Mobile number <input type='text' name="mobile" id="mobile" value="<?php echo $re
 <p>&nbsp;</p>
 
 <p>
-Password <input type='password' name="password" id="password" value="<?php echo $registrationSite->safeDisplay("password") ?>" maxlength="32" />
+Password<span class="clr-2">*</span>
+<input type='password' name="password" id="password" value="<?php echo $registrationSite->safeDisplay("password") ?>" maxlength="32" />
 </p>
 <p>&nbsp;</p>
 
 <p>
-Retype password <input type='password' name="password2" id="password2" value="<?php echo $registrationSite->safeDisplay("password2") ?>" maxlength="32" />
+Retype password<span class="clr-2">*</span>
+<input type='password' name="password2" id="password2" value="<?php echo $registrationSite->safeDisplay("password2") ?>" maxlength="32" />
 </p>
 
 <input type="submit" value="submit">

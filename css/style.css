@@ -68,7 +68,9 @@ ul.list-1 li a:hover {color:#fff; text-decoration:none;}
 
 .clr-1 {color:#00b8d0;}
 .clr-2 {color:#adc300;}
-.clr-3 {color:#efc500;}
+.clr-3 {
+	color: #FF0000;
+}
 .clr-4 {color:#fff;}
 .clr-5 {color:#a7d7e3;}
 .clr-6 {color:#d0dca8;}
