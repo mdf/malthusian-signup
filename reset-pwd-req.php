@@ -14,6 +14,7 @@ if(isset($_POST['submitted']))
 ?>
 
 <html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 
 <form id='resetreq' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -24,7 +25,7 @@ if(isset($_POST['submitted']))
 Enter the email address you registered with
 <input type='text' name='email' id='email' value='<?php echo $registrationSite->safeDisplay('email') ?>' maxlength="50" />
 
-<input type='submit' name='submit' value='submit' />
+<input name='submit' type='submit' class="date" value='submit' />
 
 </form>
 

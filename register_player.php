@@ -25,10 +25,11 @@ if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
 ?>
 
 <html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 
 <h1>
-Player registration
+Player Registration
 </h1>
 
 <form method="post" action="register_player.php">
@@ -73,7 +74,7 @@ Password <input type='password' name="password" id="password" value="<?php echo 
 Retype password <input type='password' name="password2" id="password2" value="<?php echo $registrationSite->safeDisplay("password2") ?>" maxlength="32" />
 </p>
 
-<input type="submit" value="submit">
+<input type="submit" class="date" value="submit">
 
 </form>
 

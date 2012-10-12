@@ -19,10 +19,11 @@ $_SESSION['player_info']['demographics']['1'] = date($_POST['day'] . "/" . $_POS
 ?>
 
 <html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 
 <p>
-To initiate the Covernomics application process ALL APPLICANTS are required to complete the questions below. An assessment of the applicant's suitability for Agent status will be made by Senior Management following the completion of these non-negotiable information requests. 
+To initiate the AMBER application process ALL APPLICANTS are required to complete the questions below. 
 </p>
 
 <form method="post" action="register_consent.php">
@@ -80,8 +81,8 @@ Have you ever been involved in an ARG (alternative reality game), pervasive dram
 </p>
 
 <p>
-What do you hope to get out of the Malthusian Paradox?
-<input type="text" name="8">
+What do you hope to get out of The Malthusian Paradox?
+  <input type="text" name="8">
 </p>
 
 <input type="submit" value="next">

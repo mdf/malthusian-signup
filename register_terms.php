@@ -20,41 +20,35 @@ function enableButton()
 </script>
 
 <html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 
 <h1>Terms and Conditions</h1>
-<h2>For your piece of mind COVERNOMICS will do everything possible to protect your information.</h2>
- 
-<h2>GENERAL PRIVACY</h2>
-<p>
-Covernomics takes your privacy seriously. Covernomics will never intentionally share your data with other Agents, the general public or 3rd parties without your consent. Any violations of this policy will be taken seriously and all efforts will be made to reverse the effects of a any sensitive information being shared.
-</p>
+<h2>
+  <label for="Terms"></label>
+  <textarea name="Terms" cols="60" rows="15" readonly id="Terms">For your piece of mind we will do everything possible to protect your information.
 
-<h2>PUBLIC INFORMATION</h2>
-<p>
-Agent's countries and Aliases used when signing up may be shared with other Agents and displayed on the Covernomics website. No other personal data will ever be intentionally shared by Covernomics.
-</p>
+GENERAL PRIVACY
 
-<h2>AGENT TO AGENT CONTACT</h2>
-<p>
-Agents are not prohibited from entering into correspondence, or other contact during the completion of assignments, or otherwise. Agents are expected to fully report such correspondence/contact to their direct superior.
-We do not actively discourage general public discussion about Covernomics. However we would prefer that Agents display a high degree of discretion when relating details of Covernomics operational practices. Inappropriate disclosure of details pertaining to upcoming assignment(s) that result in the compromise of the assignment(s) can result in disciplinary action.
-</p>
+We take your privacy seriously. We will never intentionally share your data with other players, the general public or 3rd parties without your consent. Any violations of this policy will be taken seriously and all efforts will be made to reverse the effects of a any sensitive information being shared. 
 
-<h2>HEALTH AND SAFETY</h2>
-<p>
-Covernomics prides itself on its excellent safety record. Unforeseen circumstances not-withstanding, Covernomics attempts at all times to provide Agents with all the information they require to undertake assignments in a safe and secure manner. Agents are never knowingly sent into situations that pose a significant risk to Agent health or safety.
-</p>
+PUBLIC INFORMATION
 
-<h2>AGENT CONDUCT</h2>
-<p>
-Covernomics highly values its strong corporate image and reputation, so your continued involvement with us is conditional upon the demonstration of a public manner which will in no way reflect poorly upon our organisation. Conduct contrary to this condition, such as bad language, rudeness, aggression, or any similar potentially embarrassing or disruptive behaviour displayed during the completion of assignments, will result in the immediate termination of your involvement with the organisation.
-</p>
+Code names used when signing up may be shared with other players and displayed on the AMBER or Malthusian Paradox website. No other personal data will ever be intentionally shared.
+
+HEALTH AND SAFETY
+
+Unforeseen circumstances not-withstanding, We attempt at all times to provide players with all the information they require to undertake assignments in a safe and secure manner. Players are never knowingly sent into situations that pose a significant risk to a players health or safety. 
+
+PLAYER CONDUCT
+
+Your continued involvement with us is conditional upon the demonstration of a public manner which will in no way reflect poorly upon our organisation. Conduct contrary to this condition, such as bad language, rudeness, aggression, or any similar potentially embarrassing or disruptive behaviour displayed during the completion of assignments, will result in the immediate termination of your involvement with the game. </textarea>
+</h2>
 
 
 <form method="post" action="register_demographic.php">
-
-<p>
+  
+  <p>
 Please enter your date of birth:
 <?php 
 echo dob_selector();
@@ -63,10 +57,10 @@ echo dob_selector();
 
 <p>
 I agree to the above terms and conditions: 
-<input type="checkbox" id="terms" name="terms" value="true" onclick="javascript:enableButton();">
+<input type="checkbox" id="terms" name="terms" value="true" onClick="javascript:enableButton();">
 </p>
 
-<input type="submit" id="submit" value="next" disabled="disabled">
+<input type="submit" disabled="disabled" class="date" id="submit" value="next">
 </form>
 
 </body>

@@ -10,6 +10,7 @@ if(!$registrationSite->checkLogin())
 ?>
 
 <html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 <h2>Home Page</h2>
 

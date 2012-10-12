@@ -12,6 +12,7 @@ if(isset($_POST['submitted']))
 ?>
 
 <html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 
 <form id='login' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	background-color: #CCC;
+	text-align: center;
+}
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #999;
+	background-color: #000;
+	background-image: none;
+}
+a img { 
+	border: none;
+}
+
+
+a:link {
+	color:#414958;
+	text-decoration: underline; 
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+
+.container {
+	width: 80%;
+	max-width: 1260px;
+	min-width: 780px;
+	margin: 0 auto;
+	background-color: #000;
+}
+
+.content {
+	padding: 10px 0;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px;
+}
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
