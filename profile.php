@@ -16,7 +16,7 @@ if(!$registrationSite->checkLogin())
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <!-- Title -->
-<title>We Are AMBER | Welcome</title>
+<title>We Are AMBER | Your profile</title>
 
 <!-- Start >> Meta Tags and Inline Scripts -->
 <meta name='robots' content='noindex,nofollow' />
@@ -35,9 +35,9 @@ if(!$registrationSite->checkLogin())
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.weareamber.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.weareamber.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Previous Post' href='http://www.weareamber.com/' />
+<link rel='prev' title='Home' href='http://www.weareamber.com/' />
 <meta name="generator" content="WordPress 3.4.2" />
-<link rel='canonical' href='http://www.weareamber.com/?page_id=39' />
+<link rel='canonical' href='http://www.weareamber.com/joinus' />
 
 <!-- NavBar | Section Head -->
 			<!--[if IE 8]>
@@ -79,7 +79,7 @@ if(!$registrationSite->checkLogin())
 	      </a>
 			
 	      		<div class="nav-collapse collapse">
-	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Previous Post</a></li>
+	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="register_terms.php">Join Us</a></li>
 </ul>				</div>
 				<div class="clear"></div>
@@ -106,14 +106,22 @@ if(!$registrationSite->checkLogin())
   <h1 class="entry-title pagetitle">Your Profile</h1>
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
-<!-- Begin | MRL registration code  -->
-
-Logged in as: <?php echo $registrationSite->sessionCodename(); ?><br>
-Email: <?php echo $registrationSite->sessionEmail(); ?><br>
-pid: <?php echo $registrationSite->sessionPid(); ?><br>
-tag: <img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>"></p>
-<p>This is your unique QR identity tag, you should bring it with you to all live events. <br>
+<p>
+  
+  <!-- Begin | MRL registration code  -->
+  
+  Logged in as: <?php echo $registrationSite->sessionCodename(); ?></p>
+<p><br>
+  Email: <?php echo $registrationSite->sessionEmail(); ?></p>
+<p><br>
+  pid: <?php echo $registrationSite->sessionPid(); ?></p>
+<p align="center"><br>
+  <img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>">
   </p>
+</p>
+<p align="center"><strong>This is your unique QR identity tag</strong><br>
+Save it to your phones camera roll or print out. You should bring it with you to all live events.<br>
+</p>
 </p>
 <p>
   <a href="./login-home.php">home</a>
@@ -155,8 +163,8 @@ tag: <img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>"></p>
 		
 
 <!-- Simple Nav | Section Template -->
-<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Previous Post</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/?page_id=39">Join Us</a></li>
+<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/joinus">Join Us</a></li>
 </ul></div></div></div></div></section><div id="cred" class="pagelines" style="display: block; visibility: visible;"><a class="plimage" target="_blank" href="http://malthusianparadox.com" title="AMBER is part of The Malthusian Paradox a transmedia ARG narrative"><img src="http://www.weareamber.com/wp-content/uploads/2012/10/AMBER-LOGO1.png" alt="AMBER is part of The Malthusian Paradox a transmedia ARG narrative" /></a></div><div class="clear"></div>		</div>
 	</footer>
 </div>

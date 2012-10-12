@@ -23,9 +23,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.weareamber.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.weareamber.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Previous Post' href='http://www.weareamber.com/' />
+<link rel='prev' title='Home' href='http://www.weareamber.com/' />
 <meta name="generator" content="WordPress 3.4.2" />
-<link rel='canonical' href='http://www.weareamber.com/?page_id=39' />
+<link rel='canonical' href='http://www.weareamber.com/joinus' />
 
 <!-- NavBar | Section Head -->
 			<!--[if IE 8]>
@@ -67,7 +67,7 @@
 	      </a>
 			
 	      		<div class="nav-collapse collapse">
-	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Previous Post</a></li>
+	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="register_terms.php">Join Us</a></li>
 </ul>				</div>
 				<div class="clear"></div>
@@ -163,8 +163,8 @@ Your new password has been sent to your email address.
 		
 
 <!-- Simple Nav | Section Template -->
-<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Previous Post</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/?page_id=39">Join Us</a></li>
+<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/joinus">Join Us</a></li>
 </ul></div></div></div></div></section><div id="cred" class="pagelines" style="display: block; visibility: visible;"><a class="plimage" target="_blank" href="http://malthusianparadox.com" title="AMBER is part of The Malthusian Paradox a transmedia ARG narrative"><img src="http://www.weareamber.com/wp-content/uploads/2012/10/AMBER-LOGO1.png" alt="AMBER is part of The Malthusian Paradox a transmedia ARG narrative" /></a></div><div class="clear"></div>		</div>
 	</footer>
 </div>

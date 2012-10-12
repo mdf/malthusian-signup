@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <!-- Title -->
-<title>We Are AMBER | Login</title>
+<title>We Are AMBER | Join Us</title>
 
 <!-- Start >> Meta Tags and Inline Scripts -->
 <meta name='robots' content='noindex,nofollow' />
@@ -23,9 +23,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.weareamber.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.weareamber.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Previous Post' href='http://www.weareamber.com/' />
+<link rel='prev' title='Home' href='http://www.weareamber.com/' />
 <meta name="generator" content="WordPress 3.4.2" />
-<link rel='canonical' href='http://www.weareamber.com/?page_id=39' />
+<link rel='canonical' href='http://www.weareamber.com/joinus' />
 
 <!-- NavBar | Section Head -->
 			<!--[if IE 8]>
@@ -67,7 +67,7 @@
 	      </a>
 			
 	      		<div class="nav-collapse collapse">
-	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Previous Post</a></li>
+	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="register_terms.php">Join Us</a></li>
 </ul>				</div>
 				<div class="clear"></div>
@@ -91,28 +91,77 @@
 
 <!-- PostLoop | Section Template -->
 <section id="postloop" class="copy no_clone section-postloop"><div class="copy-pad"><article class="post-39 page type-page status-publish hentry fpost post-number-1" id="post-39"><div class="hentry-pad"><section class="post-meta fix post-nothumb  media"><section class="bd post-header fix" ><section class="bd post-title-section fix"><hgroup class="post-title fix">
-  <h1 class="entry-title pagetitle">AMBER Login</h1>
+  <h1 class="entry-title pagetitle">Terms and Conditions</h1>
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
 <!-- Begin | MRL registration code  -->
 
+<?php
 
-<p>
-<a href="register_terms.php">Register</a>
-</p>
-<p>
-<a href="confirmreg.php">Confirm registration</a>
-</p>
-<p>
-<a href="login.php">Login</a>
-</p>
-<p>
-<a href="profile.php">A member's only page</a>
-</p>
-</p>
+require_once("./include/dob_selector.php");
+
+?>
 
 <!-- End | MRL registration code  -->
 
+<script type="text/javascript">
+
+function enableButton()
+{
+	if(document.getElementById('terms').checked)
+	{
+		document.getElementById('submit').disabled='';
+	}
+	else
+	{
+		document.getElementById('submit').disabled='true';
+	}
+}
+</script>
+
+  <label for="Terms"></label>
+  <textarea name="Terms" cols="60" rows="15" readonly id="Terms">For your piece of mind we will do everything possible to protect your information.
+
+GENERAL PRIVACY
+
+We take your privacy seriously. We will never intentionally share your data with other players, the general public or 3rd parties without your consent. Any violations of this policy will be taken seriously and all efforts will be made to reverse the effects of a any sensitive information being shared. 
+
+PUBLIC INFORMATION
+
+Code names used when signing up may be shared with other players and displayed on the AMBER or Malthusian Paradox website. No other personal data will ever be intentionally shared.
+
+HEALTH AND SAFETY
+
+Unforeseen circumstances not-withstanding, We attempt at all times to provide players with all the information they require to undertake assignments in a safe and secure manner. Players are never knowingly sent into situations that pose a significant risk to a players health or safety. 
+
+PLAYER CONDUCT
+
+Your continued involvement with us is conditional upon the demonstration of a public manner which will in no way reflect poorly upon our organisation. Conduct contrary to this condition, such as bad language, rudeness, aggression, or any similar potentially embarrassing or disruptive behaviour displayed during the completion of assignments, will result in the immediate termination of your involvement with the game. </textarea>
+</h2>
+
+
+<form method="post" action="register_demographic.php">
+  
+  <h6>&nbsp;  </h6>
+  <p><strong>Please enter your date of birth:<br>
+  </strong>
+<?php 
+echo dob_selector();
+?>
+  </p>
+
+<p>
+I agree to the above terms and conditions: 
+<input type="checkbox" id="terms" name="terms" value="true" onClick="javascript:enableButton();">
+</p>
+
+<input type="submit" disabled="disabled" id="submit" value="next">
+</form>
+
+</body>
+</html>
+
+<!-- End | MRL registration code  -->
 
 </div></div></div></article><div class="clear"></div></div></section>					</div>
 				</div>
@@ -147,8 +196,8 @@
 		
 
 <!-- Simple Nav | Section Template -->
-<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Previous Post</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/?page_id=39">Join Us</a></li>
+<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/joinus">Join Us</a></li>
 </ul></div></div></div></div></section><div id="cred" class="pagelines" style="display: block; visibility: visible;"><a class="plimage" target="_blank" href="http://malthusianparadox.com" title="AMBER is part of The Malthusian Paradox a transmedia ARG narrative"><img src="http://www.weareamber.com/wp-content/uploads/2012/10/AMBER-LOGO1.png" alt="AMBER is part of The Malthusian Paradox a transmedia ARG narrative" /></a></div><div class="clear"></div>		</div>
 	</footer>
 </div>
