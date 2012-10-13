@@ -1,3 +1,21 @@
+<?PHP
+require_once("./include/registration.php");
+
+$emailsent = false;
+if(isset($_POST['submitted']))
+{
+   if($registrationSite->emailResetPasswordLink())
+   {
+        $registrationSite->redirectToURL("reset-pwd-link-sent.php");
+        exit;
+   }
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -95,21 +113,6 @@
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
 <!-- Begin | MRL registration code  -->
-
-<?PHP
-require_once("./include/registration.php");
-
-$emailsent = false;
-if(isset($_POST['submitted']))
-{
-   if($registrationSite->emailResetPasswordLink())
-   {
-        $registrationSite->redirectToURL("reset-pwd-link-sent.php");
-        exit;
-   }
-}
-
-?>
 
 <html>
 <link href="css/style.css" rel="stylesheet" type="text/css">

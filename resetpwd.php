@@ -1,3 +1,17 @@
+<?PHP
+require_once("./include/registration.php");
+
+$success = false;
+
+if($registrationSite->resetPassword())
+{
+    $success=true;
+}
+
+?>
+
+<!-- End | MRL session code  -->
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -96,21 +110,6 @@
 
 <!-- Begin | MRL registration code  -->
 
-<?PHP
-require_once("./include/registration.php");
-
-$success = false;
-
-if($registrationSite->resetPassword())
-{
-    $success=true;
-}
-
-?>
-
-<html>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<body>
 
 <?php
 if($success){

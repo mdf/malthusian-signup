@@ -114,12 +114,12 @@ if(!$registrationSite->checkLogin())
 <p><br>
   Email: <?php echo $registrationSite->sessionEmail(); ?></p>
 <p><br>
-  pid: <?php echo $registrationSite->sessionPid(); ?></p>
+  pid: 3<?php echo $registrationSite->sessionPid(); ?></p>
 <p align="center"><br>
   <img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>">
   </p>
 </p>
-<p align="center"><strong>This is your unique QR identity tag</strong><br>
+<p align="center"><strong>This is your unique AMBER QR ID tag</strong><br>
 Save it to your phones camera roll or print it out. You should bring it with you to all live events.<br>
 </p>
 </p>
