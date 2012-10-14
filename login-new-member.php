@@ -1,17 +1,11 @@
 <?PHP
 require_once("./include/registration.php");
 
-if(!$registrationSite->checkLogin())
-{
-    $registrationSite->redirectToURL("login.php");
-    exit;
-}
-
 if(isset($_POST['submitted']))
 {
-   if($registrationSite->changePassword())
+   if($registrationSite->login())
    {
-        $registrationSite->redirectToURL("changed-pwd.php");
+        $registrationSite->redirectToURL("login-home-new-member.php");
    }
 }
 
@@ -25,7 +19,7 @@ if(isset($_POST['submitted']))
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <!-- Title -->
-<title>We Are AMBER | Change password</title>
+<title>We Are AMBER | Login</title>
 
 <!-- Start >> Meta Tags and Inline Scripts -->
 <meta name='robots' content='noindex,nofollow' />
@@ -117,29 +111,31 @@ if(isset($_POST['submitted']))
 
 <!-- Begin | MRL registration code  -->
 
-<form id='changepwd' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 
-<?php echo $registrationSite->getErrorMessage(); ?>
+<form id='login' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 
-<input type="hidden" name="submitted" id="submitted" value="1"/>
-
-<p>
-Old Password <input type='password' name='oldpwd' id='oldpwd' maxlength="50" />
-</p>
-
-<p>
-New Password <input type='password' name='password' id='password'' maxlength="50" />
-</p>
-
-<p>
-Retype password <input type='password' name="password2" id="password2" maxlength="50" />
-</p>
-
-<input type='submit' name='submit' value='submit' />
+  <p>
+  <input type='hidden' name='submitted' id='submitted' value='1'/>
+    
+  <?php echo $registrationSite->getErrorMessage(); ?></span>
+    
+    Codename
+  <input type='text' name='codename' id='codename' value='<?php echo $registrationSite->safeDisplay('codename') ?>' maxlength="50" />
+    
+    Password
+  <input type='password' name='password' id='password' maxlength="50" />
+      </p>
+  <p>&nbsp;</p>
+  <input type='submit' name='submit' value='submit' />
+  </p>
+  <p>&nbsp;</p>
+  <p><a href='reset-pwd-req.php'>Forgot Password?</a></p>
 
 </form>
 
+
 <!-- End | MRL registration code  -->
+
 
 </div></div></div></article><div class="clear"></div></div></section>					</div>
 				</div>
@@ -181,4 +177,7 @@ Retype password <input type='password' name="password2" id="password2" maxlength
 </div>
 
 <!-- Footer Scripts -->
-<script type='text/javascript' src='http://www.weareamber.com/wp-content/themes/p
+<script type='text/javascript' src='http://www.weareamber.com/wp-content/themes/pagelines/js/script.bootstrap.min.js?ver=2.0.3'></script>
+<script type='text/javascript' src='http://www.weareamber.com/wp-content/themes/pagelines/js/script.blocks.js?ver=1.0.1'></script>
+</body>
+</html>

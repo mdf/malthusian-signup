@@ -7,14 +7,6 @@ if(!$registrationSite->checkLogin())
     exit;
 }
 
-if(isset($_POST['submitted']))
-{
-   if($registrationSite->changePassword())
-   {
-        $registrationSite->redirectToURL("changed-pwd.php");
-   }
-}
-
 ?>
 
 <!-- End | MRL session code  -->
@@ -25,7 +17,7 @@ if(isset($_POST['submitted']))
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <!-- Title -->
-<title>We Are AMBER | Change password</title>
+<title>We Are AMBER | Welcome</title>
 
 <!-- Start >> Meta Tags and Inline Scripts -->
 <meta name='robots' content='noindex,nofollow' />
@@ -112,32 +104,24 @@ if(isset($_POST['submitted']))
 
 <!-- PostLoop | Section Template -->
 <section id="postloop" class="copy no_clone section-postloop"><div class="copy-pad"><article class="post-39 page type-page status-publish hentry fpost post-number-1" id="post-39"><div class="hentry-pad"><section class="post-meta fix post-nothumb  media"><section class="bd post-header fix" ><section class="bd post-title-section fix"><hgroup class="post-title fix">
-  <h1 class="entry-title pagetitle">AMBER Login</h1>
+  <h1 class="entry-title pagetitle"><?php echo $registrationSite->sessionCodename(); ?> you are now a member of AMBER</h1>
 </hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
 
 <!-- Begin | MRL registration code  -->
 
-<form id='changepwd' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
-
-<?php echo $registrationSite->getErrorMessage(); ?>
-
-<input type="hidden" name="submitted" id="submitted" value="1"/>
-
 <p>
-Old Password <input type='password' name='oldpwd' id='oldpwd' maxlength="50" />
-</p>
-
+<p align="center"><img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>">
+  </p>
+<p align="center"><strong>This is your unique AMBER QR ID tag</strong></p>
+<p align="center">Save it to your phones camera roll or print it out. You should bring it with you to all live events. You can access it at any time in your <a href='profile.php'>profile</a>.</p>
 <p>
-New Password <input type='password' name='password' id='password'' maxlength="50" />
-</p>
-
 <p>
-Retype password <input type='password' name="password2" id="password2" maxlength="50" />
+<p><a href='profile.php'>View your profile</a>
+<p>
+<a href='change-pwd.php'>Change password</a></p>
+<p>
+  <a href='logout.php'>Logout</a>
 </p>
-
-<input type='submit' name='submit' value='submit' />
-
-</form>
 
 <!-- End | MRL registration code  -->
 
@@ -181,4 +165,7 @@ Retype password <input type='password' name="password2" id="password2" maxlength
 </div>
 
 <!-- Footer Scripts -->
-<script type='text/javascript' src='http://www.weareamber.com/wp-content/themes/p
+<script type='text/javascript' src='http://www.weareamber.com/wp-content/themes/pagelines/js/script.bootstrap.min.js?ver=2.0.3'></script>
+<script type='text/javascript' src='http://www.weareamber.com/wp-content/themes/pagelines/js/script.blocks.js?ver=1.0.1'></script>
+</body>
+</html>

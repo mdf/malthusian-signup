@@ -857,5 +857,4 @@ class RegistrationSite
 }
 
 $registrationSite = new RegistrationSite();
-
 ?>
