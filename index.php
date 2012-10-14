@@ -93,7 +93,7 @@
 <section id="postloop" class="copy no_clone section-postloop"><div class="copy-pad"><article class="post-39 page type-page status-publish hentry fpost post-number-1" id="post-39"><div class="hentry-pad"><section class="post-meta fix post-nothumb  media"><section class="bd post-header fix" ><section class="bd post-title-section fix"><hgroup class="post-title fix">
   <h1 class="entry-title pagetitle">Join AMBER</h1>
 </hgroup></section> </section></section>
-<p>Companies such as TFT Biotechnology are working closely with governments  and very wealthy elite groups to bring about Life as a Service (LaaS).  Soon we will all be paying a subscription fee just to stay alive, with  very harsh measures if you refuse to pay up.</p>
+<p>Organisations such as <a href="http://www.thefriendlinesstrust.com/" target="_blank">The Friendliness Trust</a> are working closely with governments  and very wealthy elite groups to bring about Life as a Service (LaaS).  Soon we will all be paying a subscription fee just to stay alive, with  very harsh measures if you refuse to pay up.</p>
 <p><a title="We Are AMBER - Join US" href="http://weareamber.com/joinus">Join AMBER</a> - help us expose the corruption  and bring about The Revolution of Truth.</p>
 <h1 class="entry-title pagetitle">Terms and Conditions </h1>
 <p>
