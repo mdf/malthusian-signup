@@ -91,20 +91,25 @@
 
 <!-- PostLoop | Section Template -->
 <section id="postloop" class="copy no_clone section-postloop"><div class="copy-pad"><article class="post-39 page type-page status-publish hentry fpost post-number-1" id="post-39"><div class="hentry-pad"><section class="post-meta fix post-nothumb  media"><section class="bd post-header fix" ><section class="bd post-title-section fix"><hgroup class="post-title fix">
-  <h1 class="entry-title pagetitle">Terms and Conditions</h1>
-</hgroup></section> </section></section><div class="entry_wrap fix"><div class="entry_content">
-
-<!-- Begin | MRL registration code  -->
-
-<?php
+  <h1 class="entry-title pagetitle">Join AMBER</h1>
+</hgroup></section> </section></section>
+<p>Companies such as TFT Biotechnology are working closely with governments  and very wealthy elite groups to bring about Life as a Service (LaaS).  Soon we will all be paying a subscription fee just to stay alive, with  very harsh measures if you refuse to pay up.</p>
+<p><a title="We Are AMBER - Join US" href="http://weareamber.com/joinus">Join AMBER</a> - help us expose the corruption  and bring about The Revolution of Truth.</p>
+<h1 class="entry-title pagetitle">Terms and Conditions </h1>
+<p>
+  <div class="entry_wrap fix"><div class="entry_content">
+  
+  <!-- Begin | MRL registration code  -->
+  
+  <?php
 
 require_once("./include/dob_selector.php");
 
 ?>
-
-<!-- End | MRL registration code  -->
-
-<script type="text/javascript">
+  
+  <!-- End | MRL registration code  -->
+  
+  <script type="text/javascript">
 
 function enableButton()
 {
@@ -118,13 +123,13 @@ function enableButton()
 	}
 }
 </script>
-
+  
   <label for="Terms"></label>
   <textarea name="Terms" cols="60" rows="10" readonly id="Terms">For your piece of mind we will do everything possible to protect your information.
 
 GENERAL PRIVACY
 
-We take your privacy seriously. We will never intentionally share your data with other players, the general public or 3rd parties without your consent. Any violations of this policy will be taken seriously and all efforts will be made to reverse the effects of a any sensitive information being shared. 
+We take your privacy seriously. We will never intentionally share your data with other players, the general public or 3rd parties without your consent. Any violations of this policy will be taken seriously and all efforts will be made to reverse the effects of any sensitive information being shared. 
 
 PUBLIC INFORMATION
 
@@ -137,9 +142,10 @@ Unforeseen circumstances not-withstanding, We attempt at all times to provide pl
 PLAYER CONDUCT
 
 Your continued involvement with us is conditional upon the demonstration of a public manner which will in no way reflect poorly upon our organisation. Conduct contrary to this condition, such as bad language, rudeness, aggression, or any similar potentially embarrassing or disruptive behaviour displayed during the completion of assignments, will result in the immediate termination of your involvement with the game. </textarea>
-</h2>
-
-
+  </h2>
+  
+  
+</p>
 <form method="post" action="register_demographic.php">
   
   <h6>&nbsp;  </h6>
