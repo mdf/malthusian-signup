@@ -60,7 +60,7 @@ class RegistrationSite
         $this->getDemographicFields($demovars);
         $this->getConsentFields($consentvars);
         
-        if(!$this->saveRegistrationDB($regvars, $demovars, $consentvars))
+        if(!$this->saveRegistrationDB($regvars, $demovars, $consentvars, false, null))
         {
             return false;
         }
@@ -122,7 +122,7 @@ class RegistrationSite
     {
         if(empty($_GET['code'])||strlen($_GET['code'])<=10)
         {
-            $this->handleError("Please provide the confirm code");
+            $this->handleError(MP_ERR_CONFIRM_EMPTY);
             return false;
         }
         
@@ -140,13 +140,13 @@ class RegistrationSite
     {
         if(empty($_POST['codename']))
         {
-            $this->handleError("UserName is empty!");
+            $this->handleError(MP_ERR_LOGIN_CODENAME_EMPTY);
             return false;
         }
         
         if(empty($_POST['password']))
         {
-            $this->handleError("Password is empty!");
+            $this->handleError(MP_ERR_LOGIN_PASSWORD_EMPTY);
             return false;
         }
         
@@ -217,7 +217,7 @@ class RegistrationSite
     {
         if(empty($_POST['email']))
         {
-            $this->handleError("Email is empty!");
+            $this->handleError(MP_ERR_RESET_EMAIL_EMPTY);
             return false;
         }
         
@@ -240,12 +240,12 @@ class RegistrationSite
     {
         if(empty($_GET['email']))
         {
-            $this->handleError("Email is empty!");
+            $this->handleError(MP_ERR_RESET_EMAIL_EMPTY);
             return false;
         }
         if(empty($_GET['code']))
         {
-            $this->handleError("reset code is empty!");
+            $this->handleError(MP_ERR_RESET_CODE_EMPTY);
             return false;
         }
         $email = trim($_GET['email']);
@@ -253,7 +253,7 @@ class RegistrationSite
         
         if($this->getResetPasswordCode($email) != $code)
         {
-            $this->handleError("Bad reset code!");
+            $this->handleError(MP_ERR_RESET_CODE_ERROR);
             return false;
         }
         
@@ -267,13 +267,13 @@ class RegistrationSite
         
         if(false == $new_password || empty($new_password))
         {
-            $this->handleError("Error updating new password");
+            $this->handleError(MP_ERR_RESET_UPDATE_ERROR);
             return false;
         }
         
         if(false == $this->sendNewPasswordEmail($new_password, $user_rec))
         {
-        	$this->handleError("error sending new password email");
+        	$this->handleError(MP_ERR_EMAIL);
         	return false;
         }
         
@@ -284,19 +284,19 @@ class RegistrationSite
     {
         if(!$this->CheckLogin())
         {
-            $this->handleError("Not logged in!");
+            $this->handleError(MP_ERR_RESET_LOGIN);
             return false;
         }
         
         if(empty($_POST['oldpwd']))
         {
-            $this->handleError("Old password is empty!");
+            $this->handleError(MP_ERR_RESET_OLDPASSWORD_EMPTY);
             return false;
         }
         
         if(empty($_POST['password']))
         {
-            $this->handleError("New password is empty!");
+            $this->handleError(MP_ERR_RESET_NEWPASSWORD_EMPTY);
             return false;
         }
         
@@ -311,13 +311,13 @@ class RegistrationSite
         
         if($user_rec['password'] != md5($pwd))
         {
-            $this->handleError("The old password does not match!");
+            $this->handleError(MP_ERR_RESET_OLDPASSWORD_ERR);
             return false;
         }
         
         if($_POST['password'] != $_POST['password2'])
         {
-			$this->handleError("New passwords are different");
+			$this->handleError(MP_ERR_RESET_PASSWORD_MATCH);
             return false;
         }
         
@@ -367,7 +367,8 @@ class RegistrationSite
     
     function handleDBError($err)
     {
-        $this->handleError($err."\r\n mysqlerror:".mysql_error());
+        error_log($err . " " . mysql_error());
+        $this->handleError(MP_ERR_DB);
     }
     
     
@@ -382,7 +383,7 @@ class RegistrationSite
     {
         if(!$this->dBLogin())
         {
-            $this->handleError("Database login failed!");
+            $this->handleError(MP_ERR_DB);
             return false;
         }   
                
@@ -395,7 +396,7 @@ class RegistrationSite
         
         if(!$result || mysql_num_rows($result) <= 0)
         {
-            $this->handleError("Error logging in. The codename or password does not match");
+            $this->handleError(MP_ERR_LOGIN_PASSWORD_ERR);
             return false;
         }
         
@@ -427,7 +428,7 @@ class RegistrationSite
     {
         if(!$this->dBLogin())
         {
-            $this->handleError("Database login failed!");
+            $this->handleError(MP_ERR_DB);
             return false;
         }   
         $confirmcode = $this->sanitizeForSQL($_GET['code']);
@@ -436,7 +437,7 @@ class RegistrationSite
         
         if(!$result || mysql_num_rows($result) <= 0)
         {
-            $this->handleError("Wrong confirm code.");
+            $this->handleError(MP_ERR_CONFIRM_ERROR);
             return false;
         }
         
@@ -481,7 +482,7 @@ class RegistrationSite
     {
         if(!$this->dBLogin())
         {
-            $this->handleError("Database login failed!");
+            $this->handleError(MP_ERR_DB);
             return false;
         }   
         $email = $this->sanitizeForSQL($email);
@@ -490,7 +491,7 @@ class RegistrationSite
 
         if(!$result || mysql_num_rows($result) <= 0)
         {
-            $this->handleError("There is no user with email: $email");
+            $this->handleError(MP_ERR_DB_GETUSER);
             return false;
         }
         
@@ -534,7 +535,7 @@ class RegistrationSite
         
         if(!$mailer->Send())
         {
-            $this->handleError("Failed sending new password email.");
+            $this->handleError(MP_ERR_EMAIL);
             return false;
         }
         return true;
@@ -569,7 +570,7 @@ class RegistrationSite
         
         if(!$mailer->Send())
         {
-            $this->handleError("Failed sending reset password email.");
+            $this->handleError(MP_ERR_EMAIL);
             return false;
         }
         
@@ -580,15 +581,15 @@ class RegistrationSite
     function validateRegistrationSubmission()
     {        
         $validator = new FormValidator();
-        $validator->addValidation("firstname","req","Please fill in first Name");
-        $validator->addValidation("lastname","req","Please fill in last Name");
-        $validator->addValidation("email","email","The input for Email should be a valid email value");
-        $validator->addValidation("email","req","Please fill in Email");
-        $validator->addValidation("mobile","mobile","The input for mobile should be a valid mobile value");
-        $validator->addValidation("mobile","req","please fill in mobile");
-        $validator->addValidation("codename","req","Please fill in UserName");
-        $validator->addValidation("password","req","Please fill in Password");
-        $validator->addValidation("password","eqelmnt=password2","passwords don't match");
+        $validator->addValidation("firstname","req",MP_ERR_REG_FN);
+        $validator->addValidation("lastname","req",MP_ERR_REG_LN);
+        $validator->addValidation("email","email",MP_ERR_REG_EMAIL_ERR);
+        $validator->addValidation("email","req",MP_ERR_REG_EMAIL);
+        $validator->addValidation("mobile","mobile",MP_ERR_REG_MOBILE_ERR);
+        $validator->addValidation("mobile","req",MP_ERR_REG_MOBILE);
+        $validator->addValidation("codename","req",MP_ERR_REG_CODENAME);
+        $validator->addValidation("password","req",MP_ERR_REG_PASSWORD);
+        $validator->addValidation("password","eqelmnt=password2",MP_ERR_REG_PASSWORD_ERR);
 
         if(!$validator->ValidateForm())
         {
@@ -596,7 +597,6 @@ class RegistrationSite
             $error_hash = $validator->GetErrors();
             foreach($error_hash as $inpname => $inp_err)
             {
-                //$error .= $inpname.':'.$inp_err."\n";
                 $error = $inpname.':'.$inp_err."\n";
             }
             $this->handleError($error);
@@ -630,7 +630,7 @@ class RegistrationSite
         
         if(!$mailer->Send())
         {
-            $this->handleError("Failed sending registration confirmation email.");
+            $this->handleError(MP_ERR_EMAIL);
             return false;
         }
         
@@ -649,7 +649,7 @@ class RegistrationSite
     {
         if(!$this->dBLogin())
         {
-            $this->handleError("Database login failed!");
+            $this->handleError(MP_ERR_DB);
             return false;
         }
         
@@ -676,23 +676,23 @@ class RegistrationSite
     }
     
   
-    function saveRegistrationDB(&$regvars, &$demovars, &$consentvars)
+    function saveRegistrationDB(&$regvars, &$demovars, &$consentvars, $assignTag, $tagid)
     {		
         if(!$this->dBLogin())
         {
-            $this->handleError("Database login failed!");
+            $this->handleError(MP_ERR_DB);
             return false;
         }
         
         if(!$this->isFieldUnique($regvars,'email'))
         {
-            $this->handleError("This email is already registered");
+            $this->handleError(MP_ERR_REG_EMAIL_DUP);
             return false;
         }
         
         if(!$this->isFieldUnique($regvars,'codename'))
         {
-            $this->handleError("This codename is already used. Please try another codename");
+            $this->handleError(MP_ERR_REG_CODENAME_DUP);
             return false;
         }
         
@@ -723,15 +723,29 @@ class RegistrationSite
         $pid = mysql_insert_id();
         
         // create and assign a tag
-        $insert_query = "insert into tag(id) values(null)";
-
-		if(!mysql_query($insert_query, $this->connection))
+        if($assignTag == false || $tagid == null)
         {
-            $this->handleDBError("Error inserting data to the table\nquery:$insert_query");
-            return false;
+	        $insert_query = "insert into tag(id) values(null)";
+	
+			if(!mysql_query($insert_query, $this->connection))
+	        {
+	            $this->handleDBError("Error inserting data to the table\nquery:$insert_query");
+	            return false;
+	        }
+	        
+	        $tagid = mysql_insert_id();
         }
-        
-        $tagid = mysql_insert_id();
+        else
+        {
+        	// create and assign existing tag
+	        $insert_query = "insert into tag(id) values($tagid)";
+	
+			if(!mysql_query($insert_query, $this->connection))
+	        {
+	            $this->handleDBError("Error inserting data to the table\nquery:$insert_query");
+	            return false;
+	        }     	
+        }
 
         // assign tag to player
 		$insert_query = "insert into player_tag(tag_id, player_id) values($tagid, $pid)";
