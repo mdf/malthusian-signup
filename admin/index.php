@@ -52,7 +52,7 @@
     </div>
 
     <div class="container">
-		<h2>Admin pages go here</h2>
+		<h2>Admin pages</h2>
 	</div> 
     
 

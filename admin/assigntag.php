@@ -66,10 +66,14 @@ if(isset($_POST['submitted']))
     <div class="container">
 
 		<h2>Assign Tag</h2>
+		<p>
+			If a player has already registered online, assign a tag they have been given here. Enter either email or codename.
+		</p>
 		<form class="form-inline" id='assigntag' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 			<input type='hidden' name='submitted' id='submitted' value='1'/>
 			<input class="input-small" id="tag" type="text" name="tag" placeholder="Tag"/>
 			<input class="input-medium" id="email" type="text" name="email" placeholder="Email Address"/>
+			<input class="input-medium" id="codename" type="text" name="codename" placeholder="Codename"/>
 			<input type="submit" value="Submit" />
 		</form>
 

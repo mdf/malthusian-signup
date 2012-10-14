@@ -1,3 +1,17 @@
+<?php 
+
+require_once("../include/registration.php");
+
+if(isset($_POST['submitted']))
+{
+	if($registrationSite->adminRegistration())
+	{
+		header("Location: " . $_SERVER['HTTP_REFERER']);
+	}
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,7 +66,24 @@
     </div>
 
     <div class="container">
-    	<h2>Register player...</h2>
+    	<h2>Register player</h2>
+    	
+    	<p>
+		<form class="form-inline" id='dbreg' action='<?php echo $registrationSite->getSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+			<input type='hidden' name='submitted' id='submitted' value='1'/>
+			<input class="input-medium" id="firstname" type="text" name="firstname" value="<?php echo $registrationSite->safeDisplay("firstname") ?>" placeholder="First name"/><br>
+			<input class="input-medium" id="lastname" type="text" name="lastname" value="<?php echo $registrationSite->safeDisplay("lastname") ?>" placeholder="Last name"/><br>
+ 			<input class="input-medium" id="codename" type="text" name="codename" value="<?php echo $registrationSite->safeDisplay("codename") ?>" placeholder="Codename"/><br>
+ 			<input class="input-medium" id="email" type="text" name="email" value="<?php echo $registrationSite->safeDisplay("email") ?>" placeholder="Email"/><br>
+ 			<input class="input-medium" id="twitter" type="text" name="twitter" value="<?php echo $registrationSite->safeDisplay("twitter") ?>" placeholder="Twitter"/><br>
+ 			<input class="input-medium" id="mobile" type="text" name="mobile" value="<?php echo $registrationSite->safeDisplay("mobile") ?>" placeholder="Mobile"/><br>
+ 			<input class="input-medium" id="postcode" type="text" name="postcode" value="<?php echo $registrationSite->safeDisplay("postcode") ?>" placeholder="Postcode"/><br>
+ 			<input class="input-medium" id="password" type="text" name="password" value="<?php echo $registrationSite->safeDisplay("password") ?>" placeholder="Password / tag ID"/><br>
+			<br>
+			<input type="submit" value="Submit" />
+		</form>
+
+		<p><?php echo $registrationSite->getErrorMessage(); ?></p>
 	</div> 
     
 

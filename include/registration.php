@@ -37,11 +37,11 @@ class RegistrationSite
     
     function RegistrationSite()
     {
-        $this->sitename = 'malthusianparadox.com';
+        $this->sitename = 'weareamber.com';
         $this->rand_key = 'ps14DM0qDLYqJYB';
         
-        $this->from_address = 'no-reply@malthusianparadox.com';
-        $this->from_name = 'malthusian paradox';
+        $this->from_address = 'no-reply@weareamber.com';
+        $this->from_name = 'we are amber';
     }
     
     
@@ -362,7 +362,7 @@ class RegistrationSite
     
     function handleError($err)
     {
-        $this->error_message .= $err."\r\n";
+        $this->error_message = $err."\r\n";
     }
     
     function handleDBError($err)
@@ -488,6 +488,28 @@ class RegistrationSite
         $email = $this->sanitizeForSQL($email);
         
         $result = mysql_query("select * from player where email='$email'",$this->connection);  
+
+        if(!$result || mysql_num_rows($result) <= 0)
+        {
+            $this->handleError(MP_ERR_DB_GETUSER);
+            return false;
+        }
+        
+        $user_rec = mysql_fetch_assoc($result);
+
+        return true;
+    }
+    
+    function getUserFromCodename($codename,&$user_rec)
+    {
+        if(!$this->dBLogin())
+        {
+            $this->handleError(MP_ERR_DB);
+            return false;
+        }   
+        $codename = $this->sanitizeForSQL($codename);
+        
+        $result = mysql_query("select * from player where codename='$codename'",$this->connection);  
 
         if(!$result || mysql_num_rows($result) <= 0)
         {
@@ -649,16 +671,33 @@ class RegistrationSite
     {
         if(!$this->dBLogin())
         {
-            $this->handleError(MP_ERR_DB);
+            $this->handleError(mysql_error());
             return false;
         }
         
 		$user_rec = array();
-        
-        if(false === $this->getUserFromEmail($_POST['email'], $user_rec))
-        {
-            return false;
-        }
+		
+		if(isset($_POST['email']) && strlen($_POST['email'])>0)
+		{
+			if(false == $this->getUserFromEmail($_POST['email'], $user_rec))
+        	{
+	            $this->handleError("email not found");
+	            return false;
+        	}			
+		}
+		else if(isset($_POST['codename']) && strlen($_POST['codename'])>0)
+		{
+			if(false == $this->getUserFromCodename($_POST['codename'], $user_rec))
+        	{
+	            $this->handleError("codename not found");
+	            return false;
+        	}			
+		}
+		else
+		{
+			$this->handleError("enter codename or email");
+			return false;
+		}
         
         $pid = $user_rec['id'];
         $tagid = $_POST['tag'];
@@ -668,13 +707,36 @@ class RegistrationSite
 
 		if(!mysql_query($insert_query, $this->connection))
         {
-            $this->handleDBError("Error inserting data to the table\nquery:$insert_query");
+            //$this->handleDBError("Error inserting data to the table\nquery:$insert_query");
+            $this->handleError(mysql_error());
             return false;
         }
 
     	$this->handleError("Done");
     }
     
+    function adminRegistration()
+    {
+    	$_POST['password2'] = $_POST['password'];
+
+        if(!$this->validateRegistrationSubmission())
+        {
+            return false;
+        }
+    	
+		$regvars = array();
+
+        $this->getRegistrationFields($regvars);
+
+		if(!$this->saveRegistrationDB($regvars, $demovars, $consentvars, true, $regvars['password']))
+        {
+            return false;
+        }
+        
+        $this->handleError("Done");
+        
+        return true;
+    }
   
     function saveRegistrationDB(&$regvars, &$demovars, &$consentvars, $assignTag, $tagid)
     {		
@@ -697,7 +759,16 @@ class RegistrationSite
         }
         
         // player
-		$confirmcode = $this->makeConfirmationMd5($regvars['email']);
+        if($assignTag == true)
+        {
+        	// manual registration
+        	$confirmcode = "y";
+        }
+        else
+        {
+			$confirmcode = $this->makeConfirmationMd5($regvars['email']);
+        }
+        
 		$regvars['confirmcode'] = $confirmcode;
 		
 		$insert_query = "insert into player(firstname, lastname, codename, email, twitter, postcode, mobile, password, confirmcode)
@@ -757,29 +828,32 @@ class RegistrationSite
         }
 
         // player demographics and consent
-		$insert_query = "insert into player_info(player_id, q1, q2, q3, q4, q5, q6, q7, q8, c1, c2, c3, c4)
-			values
-			(
-			'" . $pid . "',
-			'" . $this->sanitizeForSQL($demovars[1]) . "',
-			'" . $this->sanitizeForSQL($demovars[2]) . "',
-			'" . $this->sanitizeForSQL($demovars[3]) . "',
-			'" . $this->sanitizeForSQL($demovars[4]) . "',
-			'" . $this->sanitizeForSQL($demovars[5]) . "',
-			'" . $this->sanitizeForSQL($demovars[6]) . "',
-			'" . $this->sanitizeForSQL($demovars[7]) . "',
-			'" . $this->sanitizeForSQL($demovars[8]) . "',
-			'" . $this->sanitizeForSQL($consentvars[1]) . "',
-			'" . $this->sanitizeForSQL($consentvars[2]) . "',
-			'" . $this->sanitizeForSQL($consentvars[3]) . "',
-			'" . $this->sanitizeForSQL($consentvars[4]) . "'
-			)";
-
-		if(!mysql_query($insert_query, $this->connection))
+        if(isset($demovars) && isset($consentvars))
         {
-            $this->handleDBError("Error inserting data to the table\nquery:$insert_query");
-            return false;
-        }		
+			$insert_query = "insert into player_info(player_id, q1, q2, q3, q4, q5, q6, q7, q8, c1, c2, c3, c4)
+				values
+				(
+				'" . $pid . "',
+				'" . $this->sanitizeForSQL($demovars[1]) . "',
+				'" . $this->sanitizeForSQL($demovars[2]) . "',
+				'" . $this->sanitizeForSQL($demovars[3]) . "',
+				'" . $this->sanitizeForSQL($demovars[4]) . "',
+				'" . $this->sanitizeForSQL($demovars[5]) . "',
+				'" . $this->sanitizeForSQL($demovars[6]) . "',
+				'" . $this->sanitizeForSQL($demovars[7]) . "',
+				'" . $this->sanitizeForSQL($demovars[8]) . "',
+				'" . $this->sanitizeForSQL($consentvars[1]) . "',
+				'" . $this->sanitizeForSQL($consentvars[2]) . "',
+				'" . $this->sanitizeForSQL($consentvars[3]) . "',
+				'" . $this->sanitizeForSQL($consentvars[4]) . "'
+				)";
+	
+			if(!mysql_query($insert_query, $this->connection))
+	        {
+	            $this->handleDBError("Error inserting data to the table\nquery:$insert_query");
+	            return false;
+	        }
+        }	
         
         return true;
     }
