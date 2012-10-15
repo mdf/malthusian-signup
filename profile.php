@@ -113,8 +113,6 @@ if(!$registrationSite->checkLogin())
   Logged in as: <?php echo $registrationSite->sessionCodename(); ?></p>
 <p><br>
   Email: <?php echo $registrationSite->sessionEmail(); ?></p>
-<p><br>
-  pid: 3<?php echo $registrationSite->sessionPid(); ?></p>
 <p align="center"><br>
   <img src="qrcache/?id=<?php echo $registrationSite->sessionTag(); ?>">
   </p>
