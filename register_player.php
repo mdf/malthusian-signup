@@ -153,7 +153,7 @@ Code name<span class="text-error">*</span>
 
 <p>
 Email address<span class="text-error">*</span>
-<input type='text' name="email" id="email" value="<?php echo $registrationSite->safeDisplay("email") ?>" maxlength="32" />
+<input type='text' name="email" id="email" value="<?php echo $registrationSite->safeDisplay("email") ?>" maxlength="64" />
 </p>
 <p>&nbsp;</p>
 
@@ -168,7 +168,8 @@ Postcode <input type='text' name="postcode" id="postcode" value="<?php echo $reg
 <p>&nbsp;</p>
 
 <p>
-Mobile number <input type='text' name="mobile" id="mobile" value="<?php echo $registrationSite->safeDisplay("mobile") ?>" maxlength="32" />
+Mobile number <span class="text-error">*</span>
+<input type='text' name="mobile" id="mobile" value="<?php echo $registrationSite->safeDisplay("mobile") ?>" maxlength="32" />
 </p>
 <p>&nbsp;</p>
 
