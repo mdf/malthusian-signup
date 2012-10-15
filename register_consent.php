@@ -286,16 +286,16 @@ We need your consent to allow us to collect and analyse data regarding your part
   <input type="hidden" name="csubmitted" id="csubmitted" value="1"/>
 </p>
 <p>
-  <input name="1" type="checkbox" value="true" checked> I have read and understand the attached information sheet, which includes information about the research project, and the data that may be recorded and published. I understand that I can withdraw consent for my participation at any time, and my personal data will be erased from our records and systems.</p>
+  <input name="1" type="checkbox" value="true"> I have read and understand the attached information sheet, which includes information about the research project, and the data that may be recorded and published. I understand that I can withdraw consent for my participation at any time, and my personal data will be erased from our records and systems.</p>
 <p>
-  <input name="2" type="checkbox" value="true" checked>
+  <input name="2" type="checkbox" value="true">
  I give permission for digital records generated during the course of my interaction with The Malthusian Paradox, including information I submit to the  websites, to be used as part of the study in an anonymised form.
 </p>
 <p>
-  <input name="3" type="checkbox" value="true" checked> I give consent for video and audio recordings of my interactions with the game at participating venues to be collected, and I agree to the use of this data in an anonymised form.
+  <input name="3" type="checkbox" value="true"> I give consent for video and audio recordings of my interactions with the game at participating venues to be collected, and I agree to the use of this data in an anonymised form.
 </p>
 <p>
-  <input name="4" type="checkbox" value="true" checked> 
+  <input name="4" type="checkbox" value="true"> 
 I give consent to taking part in a structured interview regarding my experience of The Malthusian Paradox at the conclusion of the game, and I agree to the use of this data in an anonymised form.</p>
 <p>&nbsp;</p>
 
