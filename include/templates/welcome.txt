@@ -1,8 +1,13 @@
 Hello MP_CODENAME,
 
-Thanks for your registration with malthusian paradox.
+Thanks for your registration with AMBER.
+
+Your AMBER codename is MP_CODENAME
 
 Please click the link below to confirm your registration, or paste it into your browser.
 
 MP_CONFIRMURL
+
+If you signed up at one of our live events but can not remember your temporary password you can reset it using the 'Forgot Password?' link on the login page.
+
 

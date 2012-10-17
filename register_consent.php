@@ -231,9 +231,6 @@ else
 <p>
 <form method="post" action="register_player.php">
   <label for="study">
-    <input type="submit" value="next">
-    <br>
-    <br>
   </label>
   <textarea name="study" cols="60" rows="10" readonly id="study">We are a team of researchers from the Mixed Reality Lab and the Department of Culture, Film and Media at the University of Nottingham. We are working on the Malthusian Paradox project, which is funded by the Arts Council through a Grants for the Arts award. An area of research we are particularly interested in is the interaction between people and computers. In the future, the number of computer devices used by humans will increase dramatically, adding complexity to the way we interact with technology, but also new opportunities to create games and other interactive experiences. 
 

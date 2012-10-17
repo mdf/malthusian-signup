@@ -94,6 +94,7 @@
   <h1 class="entry-title pagetitle">Join AMBER</h1>
 </hgroup></section> </section></section>
 <p>Organisations such as <a href="http://www.thefriendlinesstrust.com/" target="_blank">The Friendliness Trust</a> are working closely with governments  and very wealthy elite groups to bring about Life as a Service (LaaS).  Soon we will all be paying a subscription fee just to stay alive, with  very harsh measures if you refuse to pay up.</p>
+<p>If you want to live a normal life you&rsquo;re going to have to <a title="The Malthusian Paradox" href="http://malthusianparadox.com" target="_blank">play the game</a>. Opting out is not an option.</p>
 <p><a title="We Are AMBER - Join US" href="http://weareamber.com/joinus">Join AMBER</a> - help us expose the corruption  and bring about The Revolution of Truth.</p>
 <h1 class="entry-title pagetitle">Terms and Conditions </h1>
 <p>

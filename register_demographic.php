@@ -122,10 +122,6 @@ $_SESSION['player_info']['demographics']['1'] = date($_POST['day'] . "/" . $_POS
 <html>
 
 <form method="post" action="register_consent.php">
-  
-  <h6>
-  <input type="submit" value="Skip">
-  </h6>
   <h3 class="tcolor2">What is your gender?</h3>
   <p>
     <input type="radio" name="2" value="male">
