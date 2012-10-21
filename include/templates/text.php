@@ -1,9 +1,9 @@
 <?php
 
 
-define("MP_EMAIL_CONFIRMATION_SUBJECT", "malthusian paradox signup");
-define("MP_PASSWORD_RESET_SUBJECT", "malthusian paradox password reset");
-define("MP_PASSWORD_NEW_SUBJECT", "malthusian paradox new password");
+define("MP_EMAIL_CONFIRMATION_SUBJECT", "AMBER signup - The Malthusian Paradox");
+define("MP_PASSWORD_RESET_SUBJECT", "AMBER password reset");
+define("MP_PASSWORD_NEW_SUBJECT", "AMBER new password");
 
 define("MP_ERR_CONFIRM_EMPTY", "Please enter your confirmation code");
 define("MP_ERR_CONFIRM_ERROR", "Please enter your confirmation code");
