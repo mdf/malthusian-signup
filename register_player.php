@@ -77,7 +77,7 @@ if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
 					
 
 <!-- Branding | Section Template -->
-<section id="branding" class="container no_clone section-branding fix"><div class="texture"><div class="content"><div class="content-pad"><div class="branding_wrap fix"><a class="plbrand mainlogo-link" href="http://www.weareamber.com" title="We Are AMBER"><img class="mainlogo-img" src="http://www.weareamber.com/wp-content/uploads/2012/10/amber-header.png" alt="We Are AMBER" /></a><div class="icons" style="bottom: 12px; right: 1px;"><a target="_blank" href="http://www.weareamber.com/?feed=rss2" class="rsslink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/rss.png" alt="RSS"/></a><a target="_blank" href="https://twitter.com/AmberOps" class="twitterlink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/twitter.png" alt="Twitter"/></a><a target="_blank" href="http://www.youtube.com/themalthusianparadox" class="youtubelink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/youtube.png" alt="Youtube"/></a></div></div>		
+<section id="branding" class="container no_clone section-branding fix"><div class="texture"><div class="content"><div class="content-pad"><div class="branding_wrap fix"><a class="plbrand mainlogo-link" href="http://www.weareamber.com" title="We Are AMBER"><img class="mainlogo-img" src="http://www.weareamber.com/wp-content/uploads/2012/10/amber-header.png" alt="We Are AMBER" /></a><div class="icons" style="bottom: 12px; right: 1px;"><a target="_blank" href="http://www.weareamber.com/?feed=rss2" class="rsslink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/rss.png" alt="RSS"/></a><a target="_blank" href="https://twitter.com/AmberOps" class="twitterlink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/twitter.png" alt="Twitter"/></a><a target="_blank" href="http://www.youtube.com/amberops" class="youtubelink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/youtube.png" alt="Youtube"/></a></div></div>		
 			<script type="text/javascript"> 
 				jQuery('.icons a').hover(function(){ jQuery(this).fadeTo('fast', 1); },function(){ jQuery(this).fadeTo('fast', 0.5);});
 			</script>
@@ -95,7 +95,7 @@ if(isset($_POST["psubmitted"]) && $_POST["psubmitted"]==1)
 	      </a>
 			
 	      		<div class="nav-collapse collapse">
-	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="login-home.php">Home</a></li>
 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="register_terms.php">Join Us</a></li>
 </ul>				</div>
 				<div class="clear"></div>
@@ -223,7 +223,7 @@ Retype password<span class="text-error">*</span>
 		
 
 <!-- Simple Nav | Section Template -->
-<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="login-home.php">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/joinus">Join Us</a></li>
 </ul></div></div></div></div></section><div id="cred" class="pagelines" style="display: block; visibility: visible;"><a class="plimage" target="_blank" href="http://malthusianparadox.com" title="AMBER is part of The Malthusian Paradox a transmedia ARG narrative"><img src="http://www.weareamber.com/wp-content/uploads/2012/10/AMBER-LOGO1.png" alt="AMBER is part of The Malthusian Paradox a transmedia ARG narrative" /></a></div><div class="clear"></div>		</div>
 	</footer>

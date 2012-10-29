@@ -49,7 +49,7 @@
 					
 
 <!-- Branding | Section Template -->
-<section id="branding" class="container no_clone section-branding fix"><div class="texture"><div class="content"><div class="content-pad"><div class="branding_wrap fix"><a class="plbrand mainlogo-link" href="http://www.weareamber.com" title="We Are AMBER"><img class="mainlogo-img" src="http://www.weareamber.com/wp-content/uploads/2012/10/amber-header.png" alt="We Are AMBER" /></a><div class="icons" style="bottom: 12px; right: 1px;"><a target="_blank" href="http://www.weareamber.com/?feed=rss2" class="rsslink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/rss.png" alt="RSS"/></a><a target="_blank" href="https://twitter.com/AmberOps" class="twitterlink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/twitter.png" alt="Twitter"/></a><a target="_blank" href="http://www.youtube.com/themalthusianparadox" class="youtubelink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/youtube.png" alt="Youtube"/></a></div></div>		
+<section id="branding" class="container no_clone section-branding fix"><div class="texture"><div class="content"><div class="content-pad"><div class="branding_wrap fix"><a class="plbrand mainlogo-link" href="http://www.weareamber.com" title="We Are AMBER"><img class="mainlogo-img" src="include/images/amberops-header.png" alt="AMBER Operations" /></a><div class="icons" style="bottom: 12px; right: 1px;"><a target="_blank" href="http://www.weareamber.com/?feed=rss2" class="rsslink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/rss.png" alt="RSS"/></a><a target="_blank" href="https://twitter.com/AmberOps" class="twitterlink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/twitter.png" alt="Twitter"/></a><a target="_blank" href="http://www.youtube.com/amberops" class="youtubelink"><img src="http://www.weareamber.com/wp-content/themes/pagelines/sections/branding/youtube.png" alt="Youtube"/></a></div></div>		
 			<script type="text/javascript"> 
 				jQuery('.icons a').hover(function(){ jQuery(this).fadeTo('fast', 1); },function(){ jQuery(this).fadeTo('fast', 0.5);});
 			</script>
@@ -67,7 +67,7 @@
 	      </a>
 			
 	      		<div class="nav-collapse collapse">
-	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+	       <ul id="menu-main" class="font-sub navline pldrop pull-left"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="login-home.php">Home</a></li>
 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="register_terms.php">Join Us</a></li>
 </ul>				</div>
 				<div class="clear"></div>
@@ -114,17 +114,46 @@ Your password has been changed
 			
 		<div id="sidebar-wrap" class="">
 					<div id="sidebar1" class="scolumn" >
-					<div class="scolumn-pad">
-						
-
-<!-- Primary Sidebar | Section Template -->
-<section id="sb_primary" class="copy no_clone section-sb_primary"><div class="copy-pad"><ul id="list_sb_primary" class="sidebar_widgets fix"><li id="categories-2" class="widget_categories widget fix"><div class="widget-pad"><h3 class="widget-title">Information</h3>		<ul>
-	<li class="cat-item cat-item-7"><a href="http://www.weareamber.com/?cat=7" title="View all posts filed under News">News</a>
-</li>
-		</ul>
-</div></li></ul><div class="clear"></div></div></section>	
+					  <div class="scolumn-pad">
+					    <!-- Primary Sidebar | Section Template -->
+					    <section id="sb_primary" class="copy no_clone section-sb_primary">
+					      <div class="copy-pad">
+					        <ul id="list_sb_primary" class="sidebar_widgets fix">
+					          <li id="categories-2" class="widget_categories widget fix">
+					            <div class="widget-pad">
+					              <h3 class="widget-title">Information</h3>
+					              <ul>
+					                <li class="cat-item cat-item-7"><a href="profile.php" title="View your profile">Agent Profile</a></li>
+					                </ul>
+					              <ul>
+					                <li class="cat-item cat-item-7"><a href="change-pwd.php" title="Change your password">Change Password</a></li>
+					                </ul>
+					              <ul>
+					                <li class="cat-item cat-item-7"><a href="http://weareamber.com" title="Logout">Logout</a></li>
+					                </ul>
+					              </div>
+					            </li>
+					          <li id="categories-" class="widget_categories widget fix">
+					            <div class="widget-pad">
+					              <h3 class="widget-title">Resources</h3>
+					              <ul>
+					                <li class="cat-item cat-item-7"><a href="www.wikihost.org/w/malthusian" title="Malthusian Paradox wiki" target="_blank">Malthusian Wiki</a></li>
+					                </ul>
+					              <ul>
+					                <li class="cat-item cat-item-7"><a href="https://www.facebook.com/groups/299501523483479/" title="AMBER Cipher" target="_blank">Facebook Group</a></li>
+					                </ul>
+					              <ul>
+					                <li class="cat-item cat-item-7"><a href="http://aawood.co.uk/ambercipher/index.shtml" title="AMBER Cipher" target="_blank">AMBER Cipher</a></li>
+					                </ul>
+					              </div>
+					            </li>
+					          <li class="widget_categories widget fix"></li>
+					          </ul>
+					        <div class="clear"></div>
+					        </div>
+					      </section>
+					    </div>
 					</div>
-				</div>
 					</div>		
 			</div>
 </div></div></div></section>				</div>
@@ -140,7 +169,7 @@ Your password has been changed
 		
 
 <!-- Simple Nav | Section Template -->
-<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://www.weareamber.com/">Home</a></li>
+<section id="simple_nav" class="container no_clone section-simple_nav fix"><div class="texture"><div class="content"><div class="content-pad"><div class="menu-main-container"><ul id="menu-main-1" class="inline-list simplenav font-sub"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="login-home.php">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-39 current_page_item menu-item-48"><a href="http://www.weareamber.com/joinus">Join Us</a></li>
 </ul></div></div></div></div></section><div id="cred" class="pagelines" style="display: block; visibility: visible;"><a class="plimage" target="_blank" href="http://malthusianparadox.com" title="AMBER is part of The Malthusian Paradox a transmedia ARG narrative"><img src="http://www.weareamber.com/wp-content/uploads/2012/10/AMBER-LOGO1.png" alt="AMBER is part of The Malthusian Paradox a transmedia ARG narrative" /></a></div><div class="clear"></div>		</div>
 	</footer>
